@@ -103,7 +103,7 @@ class User extends RestController
         $this->response(['status'=>true, 'msg'=>$simpan['data'].' user telah diubah'], RestController::HTTP_OK);
       }
       else {
-        $this->response(['status'=>true, 'msg'=>'Tidak ada user yang diubah'], RestController::HTTP_BAD_REQUEST);
+        $this->response(['status'=>false, 'msg'=>'Tidak ada user yang diubah'], RestController::HTTP_BAD_REQUEST);
       }
     }
     else { //jika gagal
@@ -124,7 +124,7 @@ class User extends RestController
         $this->response(['status'=>true, 'msg'=>'user dengan id='.$id.' telah dihapus'], RestController::HTTP_OK);
       }
       else {
-        $this->response(['status'=>true, 'msg'=>'Tidak ada user yang dihapus'], RestController::HTTP_BAD_REQUEST);
+        $this->response(['status'=>false, 'msg'=>'Tidak ada user yang dihapus'], RestController::HTTP_BAD_REQUEST);
       }
     }
     else { //jika gagal

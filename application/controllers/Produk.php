@@ -109,7 +109,7 @@ class Produk extends RestController
         $this->response(['status'=>true, 'msg'=>$simpan['data'].' produk telah diubah'], RestController::HTTP_OK);
       }
       else {
-        $this->response(['status'=>true, 'msg'=>'Tidak ada produk yang diubah'], RestController::HTTP_BAD_REQUEST);
+        $this->response(['status'=>false, 'msg'=>'Tidak ada produk yang diubah'], RestController::HTTP_BAD_REQUEST);
       }
     }
     else { //jika gagal
@@ -130,7 +130,7 @@ class Produk extends RestController
         $this->response(['status'=>true, 'msg'=>'produk dengan id='.$id.' telah dihapus'], RestController::HTTP_OK);
       }
       else {
-        $this->response(['status'=>true, 'msg'=>'Tidak ada produk yang dihapus'], RestController::HTTP_BAD_REQUEST);
+        $this->response(['status'=>false, 'msg'=>'Tidak ada produk yang dihapus'], RestController::HTTP_BAD_REQUEST);
       }
     }
     else { //jika gagal
